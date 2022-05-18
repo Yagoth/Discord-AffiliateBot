@@ -79,7 +79,8 @@ def get_aliexpress_affiliate_link(url):
 
 
 def get_amazon_affiliate_link(url):
-    return url + f'?tag={AMAZON_TAG}'
+    return url.replace('www.amazon.com', 'smile.amazon.com') + f'?tag={AMAZON_TAG}'
+#need a fix for amzn, use an if?)
 
 
 client.run(DISCORD_TOKEN)
